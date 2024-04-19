@@ -13,7 +13,7 @@ def main():
         st.write("File uploaded successfully ✅")
         user_question = st.text_input("Ask a question: ")
 
-        llm = ChatGoogleGenerativeAI(model="gemini-pro",verbose = True,temperature = 0,google_api_key="AIzaSyDVfBImmUr-rxM9PPKnevbkyhi2f-yD5KU")
+        llm = ChatGoogleGenerativeAI(model="gemini-pro",verbose = True,temperature = 0.1,google_api_key="AIzaSyDVfBImmUr-rxM9PPKnevbkyhi2f-yD5KU")
         agent = create_csv_agent(llm, user_csv, verbose=True)
 
         if user_question is not None and user_question != "":
