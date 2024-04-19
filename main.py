@@ -10,7 +10,7 @@ def main():
     user_csv = st.file_uploader("Upload a CSV file", type=["csv"])
     
     if user_csv is not None:
-        st.write("File uploaded successfully ✅")
+        st.write("File uploaded successfully! ✅")
         user_question = st.text_input("Ask a question: ")
 
         llm = ChatGoogleGenerativeAI(model="gemini-pro",verbose = True,temperature = 0.1,google_api_key="AIzaSyDVfBImmUr-rxM9PPKnevbkyhi2f-yD5KU")
